@@ -1,6 +1,6 @@
 {
   "title": "Welcome!",
-  "text": "This page uses React templates, ant design and styled-components!",
+  "text": "My name is Jacob Jiskoot, and this is my webpage, providing both an example of my work, and a landing page that links to more.",
   "button": [
     {
       "title": "Explore"

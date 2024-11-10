@@ -11,15 +11,24 @@ import {
   MinTitle,
   MinPara,
 } from "./styles";
+import { ButtonWrapper } from "../RightContentBlock/styles";
+import { Button } from "../../../common/Button";
 
 const LeftContentBlock = ({
   icon,
   title,
   content,
+  button,
   section,
   t,
   id,
 }: ContentBlockProps) => {
+  const scrollTo = (id: string) => {
+    const element = document.getElementById(id) as HTMLDivElement;
+    element.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
   return (
     <LeftContentSection>
       <Fade direction="left">
@@ -45,6 +54,21 @@ const LeftContentBlock = ({
                     })}
                 </Row>
               </ServiceWrapper>
+              <ButtonWrapper>
+                {typeof button === "object" &&
+                  button.map((item: any, id: number) => {
+                    return (
+                      <Button
+                        key={id}
+                        color={item.color}
+                        fixedWidth={true}
+                        onClick={() => scrollTo("about")}
+                      >
+                        {t(item.title)}
+                      </Button>
+                    );
+                  })}
+              </ButtonWrapper>
             </ContentWrapper>
           </Col>
         </Row>

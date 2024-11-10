@@ -28,6 +28,8 @@ const Home = () => {
         title={MiddleBlockContent.title}
         content={MiddleBlockContent.text}
         button={MiddleBlockContent.button}
+        shouldScroll={true}
+        url="about"
       />
       <ContentBlock
         type="left"
@@ -44,18 +46,20 @@ const Home = () => {
         icon="product-launch.svg"
         id="mission"
       />
-      <ContentBlock
-        type="left"
+      <MiddleBlock
+        id="product"
         title={ProductContent.title}
         content={ProductContent.text}
-        icon="waving.svg"
-        id="product"
+        slideDirection="up"
+        button={ProductContent.button}
+        url="https://patient-management-eight.vercel.app/"
       />
-      <Contact
+      <div style={{ margin: '180px' }} />
+      {/* <Contact
         title={ContactContent.title}
         content={ContactContent.text}
         id="contact"
-      />
+      /> */}
     </Container>
   );
 };

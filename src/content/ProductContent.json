@@ -1,4 +1,5 @@
 {
-  "title": "That's about it!",
-  "text": "If you are familiar with React, or SPA frameworks in general, there shouldn't be any confusing parts about this template. if not, you can always reach out to me and I'll try me best to answer your questions."
+  "title": "Other Work",
+  "text": "This is an example of the most recent product demo I have made. It utilizes NextJS, Firebase & Firestore, among other tools. Click on Register to create a dummy account and test it out.",
+  "button": "Patient Management"
 }
